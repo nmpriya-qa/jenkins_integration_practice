@@ -2,12 +2,6 @@ pipeline {
   agent any
 
   stages {
-    stage('Checkout') {
-      steps {
-        git branch: 'main', url: 'https://github.com/nmpriya-qa/jenkins_integration_practice.git'
-        
-      }
-    }
     stage('Run python script') {
       steps {
         sh 'python3 sample.py'
